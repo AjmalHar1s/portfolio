@@ -42,8 +42,8 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* The Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        {/* The Single-Row Stack */}
+        <div className="flex flex-col gap-8 sm:gap-10">
           {featuredProjects.map((project, index) => (
             <motion.button
               key={project.id}
@@ -56,50 +56,58 @@ export default function Projects() {
                 ease: smoothEase,
                 delay: index * 0.1,
               }}
-              // Note the p-8 sm:p-10 here ensures the image will have padding on all sides
-              className="group text-left p-8 sm:p-10 rounded-[2rem] bg-white dark:bg-[#111111] border border-[#111111]/5 dark:border-[#EDEDED]/5 hover:border-[#009D8D]/30 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col min-h-[500px]"
+              // Changed to flex-col for mobile, md:flex-row for desktop
+              className="group text-left p-6 sm:p-10 rounded-[2rem] bg-white dark:bg-[#111111] border border-[#111111]/5 dark:border-[#EDEDED]/5 hover:border-[#009D8D]/30 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col md:flex-row items-center gap-8 lg:gap-16"
             >
-              <div className="flex flex-col flex-grow">
+              {/* Left Side: Text Content (Takes up 60% on desktop) */}
+              <div className="flex flex-col w-full md:w-3/5 h-full justify-center">
                 {/* Top Row: Title & Arrow */}
                 <div className="flex justify-between items-start mb-6">
                   <span className="text-[#111111]/40 dark:text-[#EDEDED]/40 font-semibold text-sm sm:text-base tracking-wide mt-2">
                     {project.title}
                   </span>
-                  <div className="p-2 rounded-full bg-[#111111]/5 dark:bg-[#EDEDED]/5 group-hover:bg-[#009D8D] group-hover:text-white text-[#111111]/40 dark:text-[#EDEDED]/40 transition-colors duration-300">
+                  <div className="p-2 rounded-full bg-[#111111]/5 dark:bg-[#EDEDED]/5 group-hover:bg-[#009D8D] group-hover:text-white text-[#111111]/40 dark:text-[#EDEDED]/40 transition-colors duration-300 md:hidden">
+                    {/* Only show this small arrow on mobile, desktop has one on hover */}
                     <ArrowUpRight size={20} />
                   </div>
                 </div>
 
                 {/* Headline with Inline Pill */}
-                <h3 className="text-2xl sm:text-[1.75rem] font-medium text-[#111111] dark:text-[#EDEDED] leading-[1.4] tracking-[-0.01em] mb-6">
+                <h3 className="text-2xl sm:text-[1.75rem] lg:text-4xl font-medium text-[#111111] dark:text-[#EDEDED] leading-[1.3] tracking-[-0.01em] mb-6">
                   {project.impact.split(".")[0]}{" "}
                   <span className="inline-flex items-center px-3 py-1 mx-1 -translate-y-1 rounded-full bg-[#009D8D]/10 text-[#009D8D] text-sm sm:text-base font-semibold whitespace-nowrap">
                     ✨ {project.tech[0]}
                   </span>
                 </h3>
 
-                {/* Technical Tool Box */}
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {project.tech.slice(0, 3).map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 text-xs font-medium rounded-full bg-[#F4F4F0] dark:bg-[#0A0A0A] text-[#111111]/70 dark:text-[#EDEDED]/70"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                {/* Technical Tool Box & Desktop Arrow */}
+                <div className="flex items-center justify-between mt-auto pt-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.slice(0, 3).map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 text-xs font-medium rounded-full bg-[#F4F4F0] dark:bg-[#0A0A0A] text-[#111111]/70 dark:text-[#EDEDED]/70"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Desktop Hover Arrow */}
+                  <div className="hidden md:flex p-3 rounded-full bg-[#111111]/5 dark:bg-[#EDEDED]/5 group-hover:bg-[#009D8D] group-hover:text-white text-[#111111]/40 dark:text-[#EDEDED]/40 transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0">
+                    <ArrowUpRight size={20} />
+                  </div>
                 </div>
               </div>
 
-              {/* Contained Image Teaser */}
-              {/* mt-auto pushes it to the bottom of the padded container */}
-              <div className="relative w-full h-36 sm:h-48 mt-auto rounded-2xl overflow-hidden bg-[#F4F4F0] dark:bg-[#0A0A0A] shrink-0 border border-[#111111]/5 dark:border-[#EDEDED]/5">
+              {/* Right Side: Image Teaser (Takes up 40% on desktop) */}
+              <div className="relative w-full md:w-2/5 h-48 sm:h-64 md:h-[300px] rounded-2xl overflow-hidden bg-[#F4F4F0] dark:bg-[#0A0A0A] shrink-0 border border-[#111111]/5 dark:border-[#EDEDED]/5">
                 <Image
                   src={project.image}
                   alt={`${project.title} Preview`}
                   fill
                   className="object-cover object-top transition-transform duration-[1.5s] ease-[0.16,1,0.3,1] group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, 40vw"
                 />
                 <div className="absolute inset-0 bg-[#111111]/5 dark:bg-[#000000]/30 group-hover:bg-transparent transition-colors duration-500" />
               </div>
@@ -108,7 +116,7 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Popup Modal */}
+      {/* Popup Modal (Unchanged) */}
       <AnimatePresence>
         {selectedProject && (
           <div className="fixed inset-0 z-50 flex items-center justify-center px-4 sm:px-6 py-6 sm:py-12">
