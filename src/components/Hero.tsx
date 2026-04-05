@@ -105,7 +105,6 @@ export default function Hero() {
           </motion.h1>
         </div>
 
-        {/* FIX: Added pb-6 and -mb-6 to give the "g" descender room to render before hitting the hidden overflow boundary */}
         <div className="overflow-hidden pb-6 -mb-6">
           <motion.h1
             variants={slideUp}
@@ -119,7 +118,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom Row: Paragraph and Interactive CTA */}
+      {/* Bottom Row: Paragraph and Interactive CTAs */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 border-t border-[#111111]/10 dark:border-[#EDEDED]/10 pt-8 mt-4">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -131,31 +130,62 @@ export default function Hero() {
           frameworks to make complex systems feel intuitive.
         </motion.p>
 
-        {/* Magnetic Button Wrapper */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
-          className="p-4 -m-4" // Expand hover area without shifting layout
-        >
-          <motion.button
-            ref={buttonRef}
-            onClick={handleScrollToWork}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            animate={{ x: position.x, y: position.y }}
-            transition={{
-              type: "spring",
-              stiffness: 150,
-              damping: 15,
-              mass: 0.1,
-            }}
-            className="group flex items-center gap-4 text-xl font-medium border-b border-[#111111] dark:border-[#EDEDED] pb-1 hover:text-[#009D8D] hover:border-[#009D8D] dark:hover:text-[#009D8D] dark:hover:border-[#009D8D] transition-colors cursor-pointer"
+        {/* CTA Wrapper */}
+        <div className="flex items-center gap-8 sm:gap-12">
+          {/* Subtle Download Resume Link */}
+          <motion.a
+            href="/Ajmal_Haris_Frontend_Engineer_Resume.pdf"
+            download
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.65, duration: 0.8 }}
+            className="group flex items-center gap-2 text-sm sm:text-base font-semibold tracking-widest uppercase text-[#111111]/40 dark:text-[#EDEDED]/40 hover:text-[#009D8D] dark:hover:text-[#009D8D] transition-colors"
           >
-            View Work
-            <ArrowDownRight className="transition-transform duration-300 group-hover:translate-y-1 group-hover:translate-x-1" />
-          </motion.button>
-        </motion.div>
+            Résumé
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="transition-transform duration-300 group-hover:translate-y-1"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </motion.a>
+
+          {/* Magnetic Button Wrapper */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
+            className="p-4 -m-4" // Expand hover area without shifting layout
+          >
+            <motion.button
+              ref={buttonRef}
+              onClick={handleScrollToWork}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
+              animate={{ x: position.x, y: position.y }}
+              transition={{
+                type: "spring",
+                stiffness: 150,
+                damping: 15,
+                mass: 0.1,
+              }}
+              className="group flex items-center gap-4 text-xl font-medium border-b border-[#111111] dark:border-[#EDEDED] pb-1 hover:text-[#009D8D] hover:border-[#009D8D] dark:hover:text-[#009D8D] dark:hover:border-[#009D8D] transition-colors cursor-pointer"
+            >
+              View Work
+              <ArrowDownRight className="transition-transform duration-300 group-hover:translate-y-1 group-hover:translate-x-1" />
+            </motion.button>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

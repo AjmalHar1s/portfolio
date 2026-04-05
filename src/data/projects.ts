@@ -66,7 +66,7 @@ export const featuredProjects: Project[] = [
     problem:
       "Social media sellers needed a streamlined way to manage incoming orders without heavy enterprise software.",
     impact:
-      "Single-handedly architected and deployed a live micro-SaaS platform from the ground up, currently serving active e-commerce stores.",
+      "Architected and deployed a live micro-SaaS platform from the ground up, serving active e-commerce stores.",
     edge: "Demonstrates deep understanding of modern authentication, database architecture, and end-to-end product deployment.",
     // Clean, minimalist tech office/laptop setup
     image:

@@ -43,6 +43,27 @@ function LinkedinIcon({ size = 20, className = "" }) {
   );
 }
 
+function DownloadIcon({ size = 20, className = "" }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="bg-[#F4F4F0] dark:bg-[#0A0A0A] transition-colors duration-300">
@@ -57,10 +78,10 @@ export default function Footer() {
           </h2>
 
           <a
-            href="mailto:hello@ajmalharis.com"
+            href="mailto:ajmalharis037@gmail.com"
             className="group flex items-center gap-4 text-2xl sm:text-4xl lg:text-5xl font-light text-[#111111]/70 dark:text-[#EDEDED]/70 hover:text-[#009D8D] dark:hover:text-[#009D8D] transition-colors w-fit"
           >
-            hello@ajmalharis.com
+            ajmalharis037@gmail.com
             <div className="p-3 sm:p-4 rounded-full bg-[#111111]/5 dark:bg-[#EDEDED]/10 group-hover:bg-[#009D8D]/10 group-hover:text-[#009D8D] transition-all duration-300 -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100">
               <ArrowUpRight className="w-6 h-6 sm:w-8 sm:h-8" />
             </div>
@@ -80,7 +101,19 @@ export default function Footer() {
 
           <div className="flex items-center gap-8">
             <a
-              href="https://linkedin.com/in/your-profile"
+              href="/Ajmal_Haris_Frontend_Engineer_Resume.pdf"
+              download
+              className="group flex items-center gap-2 text-[#111111]/60 dark:text-[#EDEDED]/60 hover:text-[#009D8D] dark:hover:text-[#009D8D] transition-colors font-medium"
+            >
+              <DownloadIcon
+                size={22}
+                className="transition-transform duration-300 group-hover:translate-y-1"
+              />
+              <span className="hidden sm:inline">Résumé</span>
+            </a>
+
+            <a
+              href="https://linkedin.com/in/ajmal-haris"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-2 text-[#111111]/60 dark:text-[#EDEDED]/60 hover:text-[#009D8D] dark:hover:text-[#009D8D] transition-colors font-medium"
@@ -90,7 +123,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/AjmalHar1s"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-2 text-[#111111]/60 dark:text-[#EDEDED]/60 hover:text-[#009D8D] dark:hover:text-[#009D8D] transition-colors font-medium"

@@ -73,9 +73,9 @@ export default function Projects() {
                 {/* Headline */}
                 <h3 className="text-2xl sm:text-[1.75rem] lg:text-4xl font-medium text-[#111111] dark:text-[#EDEDED] leading-[1.3] tracking-[-0.01em] mb-6">
                   {project.impact.split(".")[0]}{" "}
-                  <span className="inline-flex items-center px-3 py-1 mx-1 -translate-y-1 rounded-full bg-[#009D8D]/10 text-[#009D8D] text-sm sm:text-base font-semibold whitespace-nowrap">
+                  {/* <span className="inline-flex items-center px-3 py-1 mx-1 -translate-y-1 rounded-full bg-[#009D8D]/10 text-[#009D8D] text-sm sm:text-base font-semibold whitespace-nowrap">
                     ✨ {project.tech[0]}
-                  </span>
+                  </span> */}
                 </h3>
 
                 {/* Bottom Row */}
