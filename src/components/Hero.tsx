@@ -56,7 +56,10 @@ export default function Hero() {
     hidden: { y: "100%" },
     visible: {
       y: "0%",
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+      transition: {
+        duration: 0.8,
+        ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+      },
     },
   };
 
@@ -110,7 +113,11 @@ export default function Hero() {
             variants={slideUp}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{
+              delay: 0.1,
+              duration: 0.8,
+              ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+            }}
             className="text-[3.5rem] sm:text-[6rem] lg:text-[7.5rem] leading-[0.9] font-medium tracking-[-0.03em] text-[#111111]/50 dark:text-[#EDEDED]/50 cursor-default"
           >
             Frontend Engineer.
