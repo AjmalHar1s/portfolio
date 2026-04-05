@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Globe2, Clock, ShieldCheck } from "lucide-react";
 
 export default function RemoteReliability() {
-  const smoothEase = [0.16, 1, 0.3, 1];
+const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
   return (
     <section className="py-32 px-6 sm:px-12 lg:px-24 bg-[#F4F4F0] dark:bg-[#0A0A0A] border-t border-[#111111]/10 dark:border-[#EDEDED]/10 transition-colors duration-300">
