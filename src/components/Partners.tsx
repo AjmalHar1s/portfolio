@@ -6,8 +6,8 @@ const partners = [
   { name: "PlaySpots", type: "Sports Tech" },
   { name: "G9 Edu", type: "EdTech" },
   { name: "DashScholar", type: "E-Learning" },
-  { name: "TLC Ltd", type: "Corporate" },
-  { name: "SrishTmax", type: "Agency" },
+  { name: "DealBreaker", type: "E-Commerce" },
+  { name: "Postnat", type: "Healthcare" },
   { name: "Al Marsa", type: "Marine" },
 ];
 

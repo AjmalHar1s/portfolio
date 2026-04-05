@@ -44,6 +44,13 @@ export default function Hero() {
     setPosition({ x: 0, y: 0 });
   };
 
+  const handleScrollToWork = () => {
+    const section = document.getElementById("works-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   // Reveal Animation
   const slideUp = {
     hidden: { y: "100%" },
@@ -133,6 +140,7 @@ export default function Hero() {
         >
           <motion.button
             ref={buttonRef}
+            onClick={handleScrollToWork}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             animate={{ x: position.x, y: position.y }}
@@ -142,7 +150,7 @@ export default function Hero() {
               damping: 15,
               mass: 0.1,
             }}
-            className="group flex items-center gap-4 text-xl font-medium border-b border-[#111111] dark:border-[#EDEDED] pb-1 hover:text-[#009D8D] hover:border-[#009D8D] dark:hover:text-[#009D8D] dark:hover:border-[#009D8D] transition-colors"
+            className="group flex items-center gap-4 text-xl font-medium border-b border-[#111111] dark:border-[#EDEDED] pb-1 hover:text-[#009D8D] hover:border-[#009D8D] dark:hover:text-[#009D8D] dark:hover:border-[#009D8D] transition-colors cursor-pointer"
           >
             View Work
             <ArrowDownRight className="transition-transform duration-300 group-hover:translate-y-1 group-hover:translate-x-1" />

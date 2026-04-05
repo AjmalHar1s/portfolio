@@ -1,3 +1,5 @@
+
+
 export interface Project {
   id: string;
   title: string;
@@ -13,9 +15,9 @@ export interface Project {
 export const featuredProjects: Project[] = [
   {
     id: "g9-lexia",
-    title: "G9 Lexia & G9 Edu",
+    title: "G9 Lexia Mobile App & G9 Edu Web Platform",
     role: "Project Manager & Lead Developer",
-    tech: ["MERN Stack", "React Native", "AI Integration"],
+    tech: ["MERN Stack", "Flutter", "AI Integration"],
     problem:
       "Indian learners needed a seamless, secure platform to master the German language.",
     impact:
@@ -23,7 +25,7 @@ export const featuredProjects: Project[] = [
     edge: "Bridged communication between cross-border stakeholders and managed a remote development team to deliver both the web app and mobile ecosystem on time.",
     // Abstract interface illustration
     image:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop",
+      "/project-img/g9Img.png",
     liveLink: "#",
   },
   {
@@ -38,7 +40,7 @@ export const featuredProjects: Project[] = [
     edge: "Executed 100% remotely alongside an international co-developer, delivering a highly responsive, microservices-backed product.",
     // Dark analytics/dashboard visualization
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+      "/project-img/pro2.png",
     liveLink: "#",
   },
   {
@@ -68,7 +70,7 @@ export const featuredProjects: Project[] = [
     edge: "Demonstrates deep understanding of modern authentication, database architecture, and end-to-end product deployment.",
     // Clean, minimalist tech office/laptop setup
     image:
-      "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1200&auto=format&fit=crop",
+      "/project-img/pro3.png",
     liveLink: "#",
   },
 ];

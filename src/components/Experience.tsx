@@ -5,25 +5,25 @@ import { ArrowUpRight } from "lucide-react";
 
 const experiences = [
   {
-    year: "2023 — Present",
-    role: "Freelance & Contract Engineer",
-    company: "unBug",
+    year: "Jan 2026 — Present",
+    role: "Independent Web Developer & SaaS Founder",
+    company: "Ordrr.link / PaperChief",
     description:
-      "Delivering custom web applications and taking end-to-end ownership of project architecture for international clients.",
+      "Architecting and deploying full-stack SaaS platforms including an order-management system for social sellers and a tech-enabled career service platform. Building responsive frontend solutions using React and Next.js while leading remote teams and managing end-to-end product development.",
   },
   {
-    year: "2021 — 2023",
-    role: "React JS Developer",
+    year: "Nov 2023 — Dec 2025",
+    role: "Lead Frontend Developer & Technical Project Manager",
+    company: "G9 Edu International",
+    description:
+      "Engineered the complete web ecosystem for the G9 Lexia platform, including dashboards and corporate website. Led cross-functional remote teams, delivered 98% of milestones on Agile schedules, and built secure authentication systems integrated with backend APIs.",
+  },
+  {
+    year: "Nov 2021 — Mar 2023",
+    role: "Web Developer",
     company: "PlaySpots",
     description:
-      "Built complex, scalable applications using React and Redux, ensuring seamless performance and consistent feature delivery.",
-  },
-  {
-    year: "2020 — 2021",
-    role: "Full Stack Lead & Co-Founder",
-    company: "DashScholar",
-    description:
-      "Architected and launched an educational platform serving 1,000+ daily active users.",
+      "Built high-performance React applications including a viral FIFA World Cup prediction app that boosted user engagement by 200%. Improved frontend performance by 35% and developed responsive UI with seamless API integration.",
   },
 ];
 

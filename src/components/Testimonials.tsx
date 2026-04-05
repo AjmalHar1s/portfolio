@@ -12,8 +12,8 @@ const testimonials = [
   {
     quote:
       "When it comes to technical expertise, I trust this guy with all my heart. His ability to solve complex problems and implement cutting-edge solutions has been invaluable.",
-    name: "Majid",
-    role: "Talent Linking Private Limited",
+    name: "Abid",
+    role: "MD, G9 Edu & Lexia",
   },
 ];
 
