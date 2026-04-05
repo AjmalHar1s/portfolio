@@ -18,7 +18,7 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
-const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
+// const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
   return (
     <section className="py-32 px-6 sm:px-12 lg:px-24 bg-[#F4F4F0] dark:bg-[#0A0A0A] transition-colors duration-300">
@@ -39,7 +39,7 @@ const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
               viewport={{ once: true, margin: "-100px" }}
               transition={{
                 duration: 0.8,
-                ease: smoothEase,
+                ease: [0.16, 1, 0.3, 1],
                 delay: index * 0.2,
               }}
               className="flex flex-col"

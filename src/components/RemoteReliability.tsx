@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Globe2, Clock, ShieldCheck } from "lucide-react";
 
 export default function RemoteReliability() {
-const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
+// const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
   return (
     <section className="py-32 px-6 sm:px-12 lg:px-24 bg-[#F4F4F0] dark:bg-[#0A0A0A] border-t border-[#111111]/10 dark:border-[#EDEDED]/10 transition-colors duration-300">
@@ -16,7 +16,7 @@ const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: smoothEase }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="sticky top-32"
             >
               <div className="flex items-center gap-3 mb-8">
@@ -58,7 +58,7 @@ const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: smoothEase, delay: 0.1 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
               className="flex gap-6 sm:gap-8 items-start"
             >
               <div className="mt-1 text-[#111111]/20 dark:text-[#EDEDED]/20 hidden sm:block">
@@ -83,7 +83,7 @@ const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: smoothEase, delay: 0.2 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
               className="flex gap-6 sm:gap-8 items-start"
             >
               <div className="mt-1 text-[#111111]/20 dark:text-[#EDEDED]/20 hidden sm:block">
@@ -107,7 +107,7 @@ const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: smoothEase, delay: 0.3 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
               className="flex gap-6 sm:gap-8 items-start"
             >
               <div className="mt-1 text-[#111111]/20 dark:text-[#EDEDED]/20 hidden sm:block">

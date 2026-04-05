@@ -20,7 +20,7 @@ export default function Projects() {
     };
   }, [selectedProject]);
 
-const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
+// const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
   return (
     <section id="works-section" className="py-32 px-6 sm:px-12 lg:px-24 bg-[#F4F4F0] dark:bg-[#0A0A0A] transition-colors duration-300 relative">
@@ -30,7 +30,7 @@ const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: smoothEase }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16 md:mb-24"
         >
           <h2 className="text-4xl sm:text-5xl font-medium text-[#111111] dark:text-[#EDEDED] tracking-tight mb-4">
@@ -53,7 +53,7 @@ const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
               viewport={{ once: true, margin: "-50px" }}
               transition={{
                 duration: 0.8,
-                ease: smoothEase,
+                ease: [0.16, 1, 0.3, 1],
                 delay: index * 0.1,
               }}
               className="group text-left pt-6 sm:pt-10 px-6 sm:px-10 pb-0 rounded-[1.5rem] bg-white dark:bg-[#111111] border border-[#111111]/5 dark:border-[#EDEDED]/5 hover:border-[#009D8D]/30 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col md:flex-row items-stretch gap-8 lg:gap-16 cursor-pointer"
@@ -128,7 +128,7 @@ const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ duration: 0.4, ease: smoothEase }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-full max-w-4xl max-h-full overflow-y-auto bg-[#F4F4F0] dark:bg-[#0A0A0A] rounded-[2rem] shadow-2xl border border-[#111111]/10 dark:border-[#EDEDED]/10 flex flex-col
               [&::-webkit-scrollbar]:w-3
               [&::-webkit-scrollbar-track]:bg-transparent

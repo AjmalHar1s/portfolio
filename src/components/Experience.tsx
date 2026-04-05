@@ -68,7 +68,7 @@ export default function Experience() {
     };
   }, [selectedExp]);
 
-const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
+// const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
   return (
     <section className="py-32 px-6 sm:px-12 lg:px-24 bg-[#F4F4F0] dark:bg-[#0A0A0A] transition-colors duration-300 relative overflow-hidden">
@@ -77,7 +77,7 @@ const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: smoothEase }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16 md:mb-24"
         >
           <h2 className="text-4xl sm:text-5xl font-medium text-[#111111] dark:text-[#EDEDED] tracking-tight mb-4">
@@ -97,7 +97,7 @@ const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
               viewport={{ once: true, margin: "-50px" }}
               transition={{
                 duration: 0.6,
-                ease: smoothEase,
+                ease: [0.16, 1, 0.3, 1],
                 delay: index * 0.1,
               }}
               // Switched to strict CSS Grid
@@ -149,7 +149,7 @@ const smoothEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              transition={{ duration: 0.4, ease: smoothEase }}
+              transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="relative w-full max-w-3xl max-h-full overflow-y-auto bg-[#F4F4F0] dark:bg-[#0A0A0A] rounded-[2rem] shadow-2xl border border-[#111111]/10 dark:border-[#EDEDED]/10 flex flex-col p-8 sm:p-12
               [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-[#111111]/15 dark:[&::-webkit-scrollbar-thumb]:bg-[#EDEDED]/15 hover:[&::-webkit-scrollbar-thumb]:bg-[#009D8D] [&::-webkit-scrollbar-thumb]:border-[4px] [&::-webkit-scrollbar-thumb]:border-solid [&::-webkit-scrollbar-thumb]:border-[#F4F4F0] dark:[&::-webkit-scrollbar-thumb]:border-[#0A0A0A] [&::-webkit-scrollbar-thumb]:rounded-full"
             >
