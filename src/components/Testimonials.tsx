@@ -6,14 +6,14 @@ const testimonials = [
   {
     quote:
       "Working with Haris was a game-changer. He delivered a flawless web application that exceeded our expectations and boosted our online presence.",
-    name: "Sam",
-    role: "SrishTmax",
+    name: "Vinod V",
+    role: "COO, KASE Govt of Kerala",
   },
   {
     quote:
       "When it comes to technical expertise, I trust this guy with all my heart. His ability to solve complex problems and implement cutting-edge solutions has been invaluable.",
-    name: "Abid",
-    role: "MD, G9 Edu & Lexia",
+    name: "Ahmed Sinan",
+    role: "CE0, MarkenX - Germany",
   },
 ];
 
